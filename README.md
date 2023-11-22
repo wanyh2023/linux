@@ -2,7 +2,7 @@
 
 ## Note
 
-### Ubuntu更新
+### 系统更新
 
 ```
 apt update	//更新系统包索引或包列表:/etc/apt/sources.list
