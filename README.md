@@ -4,7 +4,7 @@
 
 ### 安装和更新
 
-```java
+```
 apt update //更新系统包索引或包列表
 apt upgrade //升级软件包至最新版本;安装系统所需安全更新
 apt install package //安装软件
@@ -14,7 +14,7 @@ apt remove package //卸载软件
 
 ### 命令相关
 
-```java
+```
 ctrl+l //清屏
 ctrl+z //暂停
 ctrl+c //中断
