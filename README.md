@@ -27,7 +27,7 @@ sudo command //以root身份执行命令
 su - user //切换用户
 man command //命令手册;g:跳转到第一行;G:跳转到最后一行;/pattern:从当前往后查询;?pattern:从当前往前查询;n:跳转下一个查询内容;N:跳转上一个查询内容
 command --help //命令解释
-history//历史命令,终端关闭后将缓存存至文件~/.bash_history
+history //历史命令,终端关闭后将缓存存至文件~/.bash_history
 history -c //删除所有历史命令
 echo $HISTCONTROL //若为ignoreboth,不保存"空格+命令"和重复连续命令
 ```
