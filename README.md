@@ -8,7 +8,8 @@
 apt update //更新系统包索引或包列表
 apt upgrade //升级软件包至最新版本;安装系统所需安全更新
 apt install package //安装软件
-apt list --installed //已安装软件
+apt list --installed //列出已安装软件
+apt show package //显示软件包信息
 apt remove package //卸载软件
 ```
 
