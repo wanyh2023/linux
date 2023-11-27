@@ -13,7 +13,7 @@ apt show package //显示软件包信息
 apt remove package //卸载软件
 ```
 
-### 命令相关
+### 终端命令
 
 ```
 ctrl+l //清屏
