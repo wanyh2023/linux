@@ -24,7 +24,7 @@ ctrl+k	//剪切光标处到行尾的字符
 ctrl+u	//剪切光标处到行首的字符
 ctrl+y	//将剪切的字符进行粘贴
 sudo ls //以root身份执行命令
-su -	//切换至root
+su root 	//切换用户 su -:切换至root
 man ls	//命令手册;g:跳转到第一行;G:跳转到最后一行;/pattern:从当前往后查询;?pattern:从当前往前查询;n:跳转下一个查询内容;N:跳转上一个查询内容
 ls --help	//命令解释
 history	//历史命令,终端关闭后将缓存存至文件~/.bash_history
