@@ -4,20 +4,20 @@
 
 ### 安装和更新
 
-```
-apt update //更新系统包索引或包列表
-apt list --upgradable //查看需更新软件包
-apt upgrade //升级软件包至最新版本;安装系统所需安全更新
-apt --only-upgrade install package //指定升级软件包
-apt install package //安装软件
-apt list --installed //列出已安装软件
-apt show package //显示软件包信息
-apt remove package //卸载软件
+```shell
+$ apt update //更新系统包索引或包列表
+$ apt list --upgradable //查看需更新软件包
+$ apt upgrade //升级软件包至最新版本;安装系统所需安全更新
+$ apt --only-upgrade install package //指定升级软件包
+$ apt install package //安装软件
+$ apt list --installed //列出已安装软件
+$ apt show package //显示软件包信息
+$ apt remove package //卸载软件
 ```
 
 ### 终端命令
 
-```
+```shell
 ctrl+l //清屏
 ctrl+z //暂停
 ctrl+c //中断
@@ -27,13 +27,13 @@ ctrl+e //光标切换至行末
 ctrl+k //剪切光标处到行尾的字符
 ctrl+u //剪切光标处到行首的字符
 ctrl+y //将剪切的字符进行粘贴
-sudo command //以root身份执行命令
-su - user //切换用户
-man command //命令手册;g:跳转到第一行;G:跳转到最后一行;/pattern:从当前往后查询;?pattern:从当前往前查询;n:跳转下一个查询内容;N:跳转上一个查询内容
-command --help //命令解释
-history //历史命令,终端关闭后将缓存存至文件~/.bash_history
-history -c //删除所有历史命令
-echo $HISTCONTROL //若为ignoreboth,不保存"空格+命令"和重复连续命令
+$ sudo command //以root身份执行命令
+$ su - user //切换用户
+$ man command //命令手册;g:跳转到第一行;G:跳转到最后一行;/pattern:从当前往后查询;?pattern:从当前往前查询;n:跳转下一个查询内容;N:跳转上一个查询内容
+$ command --help //命令解释
+$ history //历史命令,终端关闭后将缓存存至文件~/.bash_history
+$ history -c //删除所有历史命令
+$ echo $HISTCONTROL //若为ignoreboth,不保存"空格+命令"和重复连续命令
 ```
 
 ### 文件结构 
@@ -85,12 +85,38 @@ echo $HISTCONTROL //若为ignoreboth,不保存"空格+命令"和重复连续命�
 | `/var/mail`           | 过时的位置，用于放置用户邮箱文件。                                                               |
 | `/var/tmp`            | 存放重启后保留的临时文件。                                                                       |
 
-```
-pwd //print working directory 显示当前工作路径
-cd /Dir //change directory ~:当前用户家目录; ..:上一级目录; -:返回上一次所在目录
-ls [OPTION]... [FILE]...//list 列出目录内容 -l:显示详细信息; -a:显示所有文件,包括.开头的隐藏文件; -h:将大小表示为K M G 等; -S:按文件大小排序; -t:按修改时间排序; -r:排序是逆序排序; -R:递归显示所有子文件
+```shell
+$ pwd //print working directory 显示当前工作路径
+$ cd /Dir //change directory ~:当前用户家目录; ..:上一级目录; -:返回上一次所在目录
 
-stat [OPTION]... FILE... //status 显示文件状态信息
+$ ls [OPTION]... [FILE]...//list 列出目录内容 -l:显示详细信息; -a:显示所有文件,包括.开头的隐藏文件; -h:将大小表示为K M G 等; -S:按文件大小排序; -t:按修改时间排序; -r:排序是逆序排序; -R:递归显示所有子文件
+$ ls -alh
+total 3.9G
+drwxr-xr-x  19 root root 4.0K 11月 23 22:47 .
+drwxr-xr-x  19 root root 4.0K 11月 23 22:47 ..
+lrwxrwxrwx   1 root root    7  8月 10 08:18 bin -> usr/bin
+drwxr-xr-x   5 root root 4.0K 11月 23 23:29 boot
+drwxr-xr-x  20 root root 4.1K 11月 30 23:11 dev
+drwxr-xr-x 140 root root  12K 11月 28 22:09 etc
+drwxr-xr-x   3 root root 4.0K 11月 23 22:50 home
+lrwxrwxrwx   1 root root    7  8月 10 08:18 lib -> usr/lib
+drwx------   2 root root  16K 11月 23 22:43 lost+found
+drwxr-xr-x   3 root root 4.0K 11月 28 22:24 media
+drwxr-xr-x   2 root root 4.0K  8月 10 08:18 mnt
+drwxr-xr-x   2 root root 4.0K  8月 10 08:18 opt
+dr-xr-xr-x 267 root root    0 11月 30 22:33 proc
+drwx------   5 root root 4.0K 11月 24 00:23 root
+drwxr-xr-x  40 root root 1.1K 11月 30 23:35 run
+lrwxrwxrwx   1 root root    8  8月 10 08:18 sbin -> usr/sbin
+drwxr-xr-x  14 root root 4.0K 11月 30 23:11 snap
+drwxr-xr-x   2 root root 4.0K  8月 10 08:18 srv
+-rw-------   1 root root 3.9G 11月 23 22:45 swap.img
+dr-xr-xr-x  13 root root    0 11月 30 22:33 sys
+drwxrwxrwt  19 root root 4.0K 11月 30 23:12 tmp
+drwxr-xr-x  11 root root 4.0K  8月 10 08:18 usr
+drwxr-xr-x  14 root root 4.0K 11月 23 23:28 var
+
+$ stat [OPTION]... FILE... //status 显示文件状态信息
 $ stat auth.log 
   文件：auth.log
   大小：90780     	块：192        IO 块大小：4096   普通文件
@@ -101,7 +127,7 @@ $ stat auth.log
 变更时间：2023-11-30 23:18:15.926576196 +0800
 创建时间：2023-11-23 22:50:33.196000002 +0800
 
-file [OPTION]... FILE... //识别文件类型
+$ file [OPTION]... FILE... //识别文件类型
 $ file auth.log 
 auth.log: data
 ```
