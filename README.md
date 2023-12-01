@@ -36,7 +36,9 @@ $ history -c //删除所有历史命令
 $ echo $HISTCONTROL //若为ignoreboth,不保存"空格+命令"和重复连续命令
 ```
 
-### 文件结构 
+### 文件系统
+
+####文件结构
 
 ![Linux File System Hierarchy](images/linux-file-system-hierarchy.png)
 
