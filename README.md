@@ -101,22 +101,7 @@ drwxr-xr-x   5 root root 4.0K 11月 23 23:29 boot
 drwxr-xr-x  20 root root 4.1K 11月 30 23:11 dev
 drwxr-xr-x 140 root root  12K 11月 28 22:09 etc
 drwxr-xr-x   3 root root 4.0K 11月 23 22:50 home
-lrwxrwxrwx   1 root root    7  8月 10 08:18 lib -> usr/lib
-drwx------   2 root root  16K 11月 23 22:43 lost+found
-drwxr-xr-x   3 root root 4.0K 11月 28 22:24 media
-drwxr-xr-x   2 root root 4.0K  8月 10 08:18 mnt
-drwxr-xr-x   2 root root 4.0K  8月 10 08:18 opt
-dr-xr-xr-x 267 root root    0 11月 30 22:33 proc
-drwx------   5 root root 4.0K 11月 24 00:23 root
-drwxr-xr-x  40 root root 1.1K 11月 30 23:35 run
-lrwxrwxrwx   1 root root    8  8月 10 08:18 sbin -> usr/sbin
-drwxr-xr-x  14 root root 4.0K 11月 30 23:11 snap
-drwxr-xr-x   2 root root 4.0K  8月 10 08:18 srv
--rw-------   1 root root 3.9G 11月 23 22:45 swap.img
-dr-xr-xr-x  13 root root    0 11月 30 22:33 sys
-drwxrwxrwt  19 root root 4.0K 11月 30 23:12 tmp
-drwxr-xr-x  11 root root 4.0K  8月 10 08:18 usr
-drwxr-xr-x  14 root root 4.0K 11月 23 23:28 var
+。。。。
 
 $ stat [OPTION]... FILE... //status 显示文件状态信息
 $ stat auth.log 
@@ -132,5 +117,20 @@ $ stat auth.log
 $ file [OPTION]... FILE... //识别文件类型
 $ file auth.log 
 auth.log: data
+```
+
+#### 查看文件
+
+```shell
+$ cat [OPTION]... FILE //concatenate 连接文件并打印 -n:输出带行号
+$ cat hosts host.conf > myhost //将hosts host.conf两个文件合并保存为myhost
+
+$ less [OPTION]... FILE //浏览文件，支持翻页和搜索 g:跳转到第一行;G:跳转到最后一行;/pattern:从当前往后查询;?pattern:从当前往前查询;n:跳转下一个查询内容;N:跳转上一个查询内容
+
+$ head [OPTION]... FILE //查看文件开头部分,默认10行 -n number:显示前number行
+$ tail [OPTION]... FILE //查看文件末尾部分,默认10行 -n number:显示后number行
+$ tail -f FILE //将 FILE 文件里的最尾部的内容显示在屏幕上，并且不断刷新，只要 FILE 更新就可以看到最新的文件内容。常用于查阅正在改变的日志文件。
+
+$ watch [options] command //以周期性的方式执行给定的指令并显示。用于监测一个命令的运行结果。-n:每间隔时间运行,默认2s; -d:高亮显示变化部分
 ```
 
