@@ -5,35 +5,35 @@
 ### 安装和更新
 
 ```shell
-$ apt update //更新系统包索引或包列表
-$ apt list --upgradable //查看需更新软件包
-$ apt upgrade //升级软件包至最新版本;安装系统所需安全更新
-$ apt --only-upgrade install package //指定升级软件包
-$ apt install package //安装软件
-$ apt list --installed //列出已安装软件
-$ apt show package //显示软件包信息
-$ apt remove package //卸载软件
+$ apt update # 更新系统包索引或包列表
+$ apt list --upgradable # 查看需更新软件包
+$ apt upgrade # 升级软件包至最新版本;安装系统所需安全更新
+$ apt --only-upgrade install package # 指定升级软件包
+$ apt install package # 安装软件
+$ apt list --installed # 列出已安装软件
+$ apt show package # 显示软件包信息
+$ apt remove package # 卸载软件
 ```
 
 ### 终端命令
 
 ```shell
-ctrl+l //清屏
-ctrl+z //暂停
-ctrl+c //中断
-ctrl+d //退出shell
-ctrl+a //光标切换至行首
-ctrl+e //光标切换至行末 
-ctrl+k //剪切光标处到行尾的字符
-ctrl+u //剪切光标处到行首的字符
-ctrl+y //将剪切的字符进行粘贴
-$ sudo command //以root身份执行命令
-$ su - user //切换用户
-$ man command //命令手册;g:跳转到第一行;G:跳转到最后一行;/pattern:从当前往后查询;?pattern:从当前往前查询;n:跳转下一个查询内容;N:跳转上一个查询内容
-$ command --help //命令解释
-$ history //历史命令,终端关闭后将缓存存至文件~/.bash_history
-$ history -c //删除所有历史命令
-$ echo $HISTCONTROL //若为ignoreboth,不保存"空格+命令"和重复连续命令
+ctrl+l # 清屏
+ctrl+z # 暂停
+ctrl+c # 中断
+ctrl+d # 退出shell
+ctrl+a # 光标切换至行首
+ctrl+e # 光标切换至行末 
+ctrl+k # 剪切光标处到行尾的字符
+ctrl+u # 剪切光标处到行首的字符
+ctrl+y # 将剪切的字符进行粘贴
+$ sudo command # 以root身份执行命令
+$ su - user # 切换用户
+$ man command # 命令手册;g:跳转到第一行;G:跳转到最后一行;/pattern:从当前往后查询;?pattern:从当前往前查询;n:跳转下一个查询内容;N:跳转上一个查询内容
+$ command --help # 命令解释
+$ history # 历史命令,终端关闭后将缓存存至文件~/.bash_history
+$ history -c # 删除所有历史命令
+$ echo $HISTCONTROL # 若为ignoreboth,不保存"空格+命令"和重复连续命令
 ```
 
 ### 重定向(>)和管道(|)
@@ -199,9 +199,9 @@ $ cat test.txt | grep -n 'test'
 `cat test.txt`会将test.txt的内容作为标准输出，然后利用管道，将其作为`grep -n 'test'`命令的标准输入。
 
 ```shell
-$ tee [OPTION]... [FILE]... //读取标准输入的数据，并将其内容输出成文件 -a:追加
+$ tee [OPTION]... [FILE]... # 读取标准输入的数据，并将其内容输出成文件 -a:追加
 
-$ ls -l not_find_runoob 2>&1 | tee -a ls.log //把标准报错也作为标准输出。写 crontab job 的时候常用
+$ ls -l not_find_runoob 2>&1 | tee -a ls.log # 把标准报错也作为标准输出。写 crontab job 的时候常用
 ```
 
 
@@ -256,10 +256,10 @@ $ ls -l not_find_runoob 2>&1 | tee -a ls.log //把标准报错也作为标准输
 | `/var/tmp`            | 存放重启后保留的临时文件。                                                                       |
 
 ```shell
-$ pwd //print working directory 显示当前工作路径
-$ cd /Dir //change directory ~:当前用户家目录; ..:上一级目录; -:返回上一次所在目录
+$ pwd # print working directory 显示当前工作路径
+$ cd /Dir # change directory ~:当前用户家目录; ..:上一级目录; -:返回上一次所在目录
 
-$ ls [OPTION]... [FILE]...//list 列出目录内容 -l:显示详细信息; -a:显示所有文件,包括.开头的隐藏文件; -h:将大小表示为K M G 等; -S:按文件大小排序; -t:按修改时间排序; -r:排序是逆序排序; -R:递归显示所有子文件
+$ ls [OPTION]... [FILE]...# list 列出目录内容 -l:显示详细信息; -a:显示所有文件,包括.开头的隐藏文件; -h:将大小表示为K M G 等; -S:按文件大小排序; -t:按修改时间排序; -r:排序是逆序排序; -R:递归显示所有子文件
 $ ls -alh
 total 3.9G
 drwxr-xr-x  19 root root 4.0K 11月 23 22:47 .
@@ -271,7 +271,7 @@ drwxr-xr-x 140 root root  12K 11月 28 22:09 etc
 drwxr-xr-x   3 root root 4.0K 11月 23 22:50 home
 。。。。
 
-$ tree //以树状图列出目录的内容 -a:显示所有文件和目录; -d:只显示目录; -L:level 限制目录显示层级
+$ tree # 以树状图列出目录的内容 -a:显示所有文件和目录; -d:只显示目录; -L:level 限制目录显示层级
 $ tree C-Program/
 C-Program/
 ├── bin
@@ -283,7 +283,7 @@ C-Program/
     └── Debug
         └── main.o
 
-$ stat [OPTION]... FILE... //status 显示文件状态信息
+$ stat [OPTION]... FILE... # status 显示文件状态信息
 $ stat auth.log 
   文件：auth.log
   大小：90780     	块：192        IO 块大小：4096   普通文件
@@ -294,44 +294,127 @@ $ stat auth.log
 变更时间：2023-11-30 23:18:15.926576196 +0800
 创建时间：2023-11-23 22:50:33.196000002 +0800
 
-$ file [OPTION]... FILE... //识别文件类型
+$ file [OPTION]... FILE... # 识别文件类型
 $ file auth.log 
 auth.log: data
 
-$ wc [-lwc] //显示文件行数、字数，以及字节数 -l:显示行数; -w:显示字数; -c:显示Bytes数
+$ wc [-lwc] # 显示文件行数、字数，以及字节数 -l:显示行数; -w:显示字数; -c:显示Bytes数
 $ wc main.c 
  20  49 378 main.c
+```
+
+#### 硬连接、软连接
+
+**硬连接:** linux下的文件是通过索引节点（Inode）来识别文件，硬链接可以认为是一个指针，指向文件索引节点的指针，系统并不为它重新分配inode。每添加一个一个硬链接，文件的链接数就加1。删除其中任何一个，每次只会删除一个指针，链接数同时减一，只有将所有指向文件内容的指针，也即链接数减为0时，内核才会把文件内容从磁盘上删除。不允许给目录创建硬链接。
+
+```shell
+$ ls -li
+2232370 -rw-rw-r-- 1 wanyuhao wanyuhao 0 12月 16 00:24 file1
+2232371 -rw-rw-r-- 1 wanyuhao wanyuhao 0 12月 16 00:24 file2
+$ ln file2 file2hard  
+$ ls –il  
+ls -li
+2232370 -rw-rw-r-- 1 wanyuhao wanyuhao 0 12月 16 00:24 file1
+2232371 -rw-rw-r-- 2 wanyuhao wanyuhao 0 12月 16 00:24 file2
+2232371 -rw-rw-r-- 2 wanyuhao wanyuhao 0 12月 16 00:24 file2hard
+```
+
+**软连接:** [链接名]可以是任何一个文件名，也可以是一个目录，并且允许它与“目标”不在同一个文件系统中。如果[链接名]是一个已经存在的目录，系统将在该目录下建立一个或多个与“目标”同名的文件，此新建的文件实际上是指向原“目标”的符号链接文件。
+
+```shell
+$ ln -s file1 file1soft
+$ ls -li
+2232370 -rw-rw-r-- 1 wanyuhao wanyuhao 0 12月 16 00:24 file1
+2232372 lrwxrwxrwx 1 wanyuhao wanyuhao 5 12月 16 00:38 file1soft -> file1
+2232371 -rw-rw-r-- 2 wanyuhao wanyuhao 0 12月 16 00:24 file2
+2232371 -rw-rw-r-- 2 wanyuhao wanyuhao 0 12月 16 00:24 file2hard
 ```
 
 #### 查看文件
 
 ```shell
-$ cat [OPTION]... FILE //concatenate 连接文件并打印 -n:输出带行号
-$ cat hosts host.conf > myhost //将hosts host.conf两个文件合并保存为myhost
+$ cat [OPTION]... FILE # concatenate 连接文件并打印 -n:输出带行号
+$ cat hosts host.conf > myhost # 将hosts host.conf两个文件合并保存为myhost
 
-$ less [OPTION]... FILE //浏览文件，支持翻页和搜索 g:跳转到第一行;G:跳转到最后一行;/pattern:从当前往后查询;?pattern:从当前往前查询;n:跳转下一个查询内容;N:跳转上一个查询内容
+$ less [OPTION]... FILE # 浏览文件，支持翻页和搜索 g:跳转到第一行;G:跳转到最后一行;/pattern:从当前往后查询;?pattern:从当前往前查询;n:跳转下一个查询内容;N:跳转上一个查询内容
 
-$ head [OPTION]... FILE //查看文件开头部分,默认10行 -n number:显示前number行
-$ tail [OPTION]... FILE //查看文件末尾部分,默认10行 -n number:显示后number行
-$ tail -f FILE //将 FILE 文件里的最尾部的内容显示在屏幕上，并且不断刷新，只要 FILE 更新就可以看到最新的文件内容。常用于查阅正在改变的日志文件。
+$ head [OPTION]... FILE # 查看文件开头部分,默认10行 -n number:显示前number行
+$ tail [OPTION]... FILE # 查看文件末尾部分,默认10行 -n number:显示后number行
+$ tail -f FILE # 将 FILE 文件里的最尾部的内容显示在屏幕上，并且不断刷新，只要 FILE 更新就可以看到最新的文件内容。常用于查阅正在改变的日志文件。
 
-$ cut OPTION... [FILE]... //剪切字节、字符和字段 -b:以字节为单位进行分割; -c:以字符为单位进行分割; -d:自定义分隔符，默认为制表符; -f:与-d一起使用，指定显示区域
+$ cut OPTION... [FILE]... # 剪切字节、字符和字段 -b:以字节为单位进行分割; -c:以字符为单位进行分割; -d:自定义分隔符，默认为制表符; -f:与-d一起使用，指定显示区域
 
-$ watch [options] command //以周期性的方式执行给定的指令并显示。用于监测一个命令的运行结果。-n:每间隔时间运行,默认2s; -d:高亮显示变化部分
+$ watch [options] command # 以周期性的方式执行给定的指令并显示。用于监测一个命令的运行结果。-n:每间隔时间运行,默认2s; -d:高亮显示变化部分
 ```
 
 #### 新建、拷贝、移动、删除
 
 ```shell
-$ touch [OPTION]... FILE... //新建文件
+$ touch [OPTION]... FILE... # 新建文件
 修改时间戳：
-$ touch [-amr] [-t 202312060713.20] FILE //默认修改访问时间和修改时间; a:改变访问时间; m:改变修改时间; r:指定文档或目录的日期时间，统统设成和参考文档或目录的日期时间相同; t:修改为指定时间
-$ mkdir [OPTION]... DIRECTORY... //创建目录 -p:根据需要创建父目录,不产生错误
+$ touch [-amr] [-t 202312060713.20] FILE # 默认修改访问时间和修改时间; a:改变访问时间; m:改变修改时间; r:指定文档或目录的日期时间，统统设成和参考文档或目录的日期时间相同; t:修改为指定时间
+$ mkdir [OPTION]... DIRECTORY... # 创建目录 -p:根据需要创建父目录,不产生错误
 
-$ cp [OPTION]... SOURCE... DIRECTORY //复制文件或目录 -r:递归复制目录; -u:仅复制更新的文件; -p:保留源文件的权限、所有者和时间戳信息; -i:覆盖前提示; -f:覆盖前不提示,强制复制
+$ cp [OPTION]... SOURCE... DIRECTORY # 复制文件或目录 -r:递归复制目录; -u:仅复制更新的文件; -p:保留源文件的权限、所有者和时间戳信息; -i:覆盖前提示; -f:覆盖前不提示,强制复制
 
-$ mv [OPTION]... SOURCE... DIRECTORY //移动文件或目录;可用于重命名 -n:不要覆盖已存在的文件或目录; -u:仅移动更新的文件; -i:覆盖前提示; -f:覆盖前不提示,强制复制
+$ mv [OPTION]... SOURCE... DIRECTORY # 移动文件或目录;可用于重命名 -n:不要覆盖已存在的文件或目录; -u:仅移动更新的文件; -i:覆盖前提示; -f:覆盖前不提示,强制复制
 
-$ rm [OPTION]... [FILE]... //删除文件或目录 -r:递归删除目录; -f:强制删除，无需确认 -i:删除前提示
+$ rm [OPTION]... [FILE]... # 删除文件或目录 -r:递归删除目录; -f:强制删除，无需确认 -i:删除前提示
+```
+
+#### 查找
+
+```shell
+$ which [-a] filename ... # 在环境变量$PATH设置的目录里查找符合条件的文件
+$ which ls
+/usr/bin/ls
+
+$ locate [OPTION]... FILE... # 从/var/cache/locate/locatedb中查找符合的文件；手动更新库：sudo updatedb。-b:仅匹配路径名的基本名称; -i:忽略大小写; -r:使用基本正则表达式; -S:不搜索条目，打印有关每个数据库的统计信息
+
+$ find [PATH] [OPTION] # 在指定目录下查找文件和目录.-name:按文件名查找; -type:按文件类型查找，可以是 f（普通文件）、d（目录）、l（符号链接）等; -size [+-]size[cwbkMG]：按文件大小查找，支持使用 + 或 - 表示大于或小于指定大小，单位可以是 c（字节）、w（字数）、b（块数）、k（KB）、M（MB）或 G（GB）; -atime -amin -ctime -cmin -mtime -mmin +n比n天前更早 -n在n天内 n 天前（指定那一天）:根据时间戳查找
+$ sudo find /etc -name passwd 
+/etc/passwd
+/etc/pam.d/passwd
+
+$ grep [OPTION...] PATTERNS [FILE...] # 查找文件里符合条件的字符串. -i:忽略大小写进行匹配。-v:反向查找; -n:显示匹配行的行号; -c:只打印匹配的行数; -w:只显示全字符合; -A:除了显示符合范本样式的那一行之外，并显示该行之后的内容; -B:除了显示符合样式的那一行之外，并显示该行之前的内容。-C:除了显示符合样式的那一行之外，并显示该行之前后的内容。
+$ grep printf C-Program/main.c
+    printf("Please enter your name,age,height:");
+    printf("\nYour name is %s,%d years old,%.2f meters tall.\n", name, age, height);
+```
+
+#### 对比
+
+```shell
+$ cmp [OPTION]... FILE1 [FILE2 [SKIP1 [SKIP2]]] # 对比文件不同
+cmp main.c C-Program/main.c 
+main.c C-Program/main.c 不同：第 51 字节，第 3 行
+
+$ diff [OPTION]... FILES # 对比文件不同. -w:忽略全部的空格字符; -y:以并列的方式显示文件的异同之处; -B:不检查空白行。
+$ diff main.c C-Program/main.c 
+3,4c3,4
+< Purpose: This program prints out hello world.
+< Date: 2023-12-15
+---
+> Purpose: This program prints out imputs.
+> Date: 2023-12-11
+12c12,17
+<     printf("hello world!");
+---
+>     char name[10];
+>     int age;
+>     float height;
+>     printf("Please enter your name,age,height:");
+>     scanf("%s %d %f", name, &age, &height);
+>     printf("\nYour name is %s,%d years old,%.2f meters tall.\n", name, age, height);
+```
+
+#### 归档、压缩
+
+```shell
+$ tar [-cxzjvf] filename [file/dir] # 打包压缩 -c:创建归档; -x:从归档解出文件; -v:详细地列出处理的文件; -f:指定文件名; -z:通过gzip处理; -j: 过bzip2处理,压缩更强; -t:查看内容
+$ tar -czvf C-Program.tar.gz C-Program/
+$ tar -cjvf C-Program.tar.bz2 C-Program/
+$ tar -xzvf C-Program.tar.gz C-Program/
+$ tar -xjvf C-Program.tar.bz2 C-Program/
 ```
 
